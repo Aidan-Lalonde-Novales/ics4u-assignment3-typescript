@@ -73,9 +73,9 @@ class Triangle {
     if (this.sideA === this.sideB && this.sideB === this.sideC) {
       return 'Equilateral'
     } else if (
-      Math.round(this.angle(1)) === 90 ||
-      Math.round(this.angle(2)) === 90 ||
-      Math.round(this.angle(3)) === 90
+      this.sideA ** 2 + this.sideB ** 2 === this.sideC ** 2 ||
+      this.sideC ** 2 + this.sideA ** 2 === this.sideB ** 2 ||
+      this.sideB ** 2 + this.sideC ** 2 === this.sideA ** 2
     ) {
       return 'Right Angle'
     } else if (
